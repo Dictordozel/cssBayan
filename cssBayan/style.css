@@ -1,4 +1,6 @@
 * {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -15,6 +17,7 @@ ul {
     padding: 0;
 }
 
+
 .container {
     width: 30%;
     height: 100vh;
@@ -28,7 +31,7 @@ ul {
     cursor: pointer;
 }
 
-.bayan__box:hover ~.bayan__trigger>p {
+.bayan__box:hover ~.bayan__trigger>span {
     color: #000;
 }
 
@@ -38,71 +41,82 @@ ul {
 
 .bayan__trigger {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 100%;
+    flex-direction: column;
+    width: 100%;
     padding: 1.25rem;
     border-top: 1px solid #c3c3c3;
     cursor: pointer;
 }
 
-.bayan__trigger>span {
+
+
+.bayan__btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.bayan__btn>span {
     display: inline-block;
     color: blue;
 }
 
-.bayan__trigger>img {
+.bayan__btn>img {
+    display: none;
     width: 1rem;
     height: 1rem;
-    transition: all 1s;
+    transition: all 0.2s;
 }
+
+
 
 .bayan__target {
     display: flex;
-    height: 0;
+    max-height: 0;
 	overflow: hidden;
-	transition: 0.5s;
     justify-content: center;
-    transition: all 0.5s;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.2s, scale 0.3s, opacity 0.3s;
 }
 
 .bayan__target>img {
     max-width: 12.5rem;
 }
 
-.bayan__toggle:checked ~.bayan__target {
-    height: auto;
-	padding: 0.625rem 0;
+.bayan__box:hover .bayan__btn>img{
+    display: block;
+}
+
+.bayan__box:hover .bayan__btn>span{
+    color: #000;
+}
+
+.bayan__toggle:checked ~.bayan__trigger>.bayan__target {
+    max-height: 100%;
+	padding-top: 1.25rem;
     overflow: visible;
+    transform: scale(100%);
+    opacity: 1;
 }
 
-.bayan__toggle:checked ~.bayan__trigger>span {
-    color:#000;
-}
-
-.bayan__toggle:hover ~.bayan__target {
-    height: auto;
-	padding: 0.625rem 0;
+.bayan__toggle:hover ~.bayan__trigger>.bayan__target {
+    max-height: 100%;
+	padding-top: 1.25rem;
     overflow: visible;
+    transform: scale(100%);
+    opacity: 1;
 }
 
-.bayan__toggle:hover ~.bayan__trigger>img {
+.bayan__toggle:checked ~.bayan__trigger>.bayan__btn>span{
+    color: #000;
+}
+
+.bayan__toggle:checked ~.bayan__trigger>.bayan__btn>img{
     transform: rotate(135deg);
 }
-
-.bayan__toggle:checked ~.bayan__trigger>img {
+.bayan__toggle:hover ~.bayan__trigger>.bayan__btn>img{
     transform: rotate(135deg);
-}
-
-.bayan__target {
-    display: flex;
-    height: 0;
-	overflow: hidden;
-	transition: 0.5s;
-    justify-content: center;
-    transition: all 0.5s;
-}
-
-.bayan__target>img {
-    max-width: 12.5rem;
 }
