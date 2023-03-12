@@ -22,16 +22,16 @@ ul {
 }
 
 .container {
-    width: 43.75rem;
+    width: 15.625rem;
     height: auto;
     margin: 0 auto;
-    padding-left: 3.125rem;
-    padding-right: 3.125rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
     background-color: beige;
 }
 
 .bayan__title {
-    font-size: 2.375rem;
+    font-size: 1.75rem;
     font-weight: 900;
     margin-bottom: .625rem;
 }
@@ -55,7 +55,7 @@ ul {
 }
 
 .bayan__btn>span {
-    font-size: 1.125rem;
+    font-size: .75rem;
     color: blue;
 }
 
@@ -65,9 +65,9 @@ ul {
 
 
 .bayan__btn>img {
-    display: none;
-    height: 1rem;
-    width: 1rem;
+    display: block;
+    height: .625rem;
+    width: .625rem;
     transition: all 0.3s ease;
 }
 
@@ -76,23 +76,20 @@ ul {
 }
 
 .bayan__target {
-    display: block;
     height: 0;
     object-fit: cover;
     width: auto;
     margin-bottom: .625rem;
     border: .0625rem solid #fff;
-    border-radius: 1.875rem;
+    border-radius: .9375rem;
     transform: scale(0);
     transition: all 0.3s ease;
 }
 
 .bayan__toggle:checked ~.bayan__trigger >.bayan__target {
-    height: 18.75rem;
+    height: 12.5rem;
     transform: scale(100%);
 }
-
-
 
 @media(hover:hover) {
     .bayan__box:hover .bayan__btn>img {
@@ -116,13 +113,12 @@ ul {
     }
 
     .bayan__toggle:hover ~.bayan__trigger >.bayan__target {
-        height: 18.75rem;
+        height: 12.5rem;
         transform: scale(100%);
     }
 }
 
-
-@media (max-width: 51.25rem) {
+@media screen and (min-width: 768px) {
     .container {
         width: 31.25rem;
         padding-left: 2.1875rem;
@@ -142,31 +138,45 @@ ul {
         height: .875rem;
         width: .875rem;
     }
+
+    .bayan__toggle:checked ~.bayan__trigger >.bayan__target {
+        height: 15.625rem;
+    }
+
+    .bayan__toggle:hover ~.bayan__trigger >.bayan__target {
+        height: 15.625rem;
+    }
 }
 
-@media (max-width: 20rem) {
+@media (min-width: 1400px) {
+
     .container {
-        width: 15.625rem;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
+        width: 43.75rem;
+        padding-left: 3.125rem;
+        padding-right: 3.125rem;
     }
 
     .bayan__title {
-        font-size: 1.75rem;
+        font-size: 2.375rem;
     }
 
     .bayan__btn>span {
-        font-size: .75rem;
+        font-size: 1.125rem;
     }
 
     .bayan__btn>img {
-        display: block;
-        height: .625rem;
-        width: .625rem;
+        display: none;
+        height: 1rem;
+        width: 1rem;
+        transition: all 0.3s ease;
     }
 
     .bayan__toggle:checked ~.bayan__trigger >.bayan__target {
-        height: 12.5rem;
+        height: 18.75rem;
+    }
+
+    .bayan__toggle:hover ~.bayan__trigger >.bayan__target {
+        height: 18.75rem;
     }
 }
 
