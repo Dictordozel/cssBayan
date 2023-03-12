@@ -81,32 +81,7 @@ ul {
     border-radius: .9375rem;
 }
 
-.bayan__target>img:hover{
-    border: .1875rem solid #3e3e3e;
-    box-shadow: .3125rem .3125rem 0.625rem rgba(0,0,0,0.7);
-}
-
-.bayan__box:hover ~.bayan__trigger>span {
-    color: #000;
-}
-
-.bayan__box:hover .bayan__btn>img {
-    display: block;
-}
-
-.bayan__box:hover .bayan__btn>span {
-    color: #000;
-}
-
 .bayan__toggle:checked ~.bayan__trigger>.bayan__target {
-    max-height: 100%;
-	padding-top: 1.25rem;
-    overflow: visible;
-    transform: scale(100%);
-    opacity: 1;
-}
-
-.bayan__toggle:hover ~.bayan__trigger>.bayan__target {
     max-height: 100%;
 	padding-top: 1.25rem;
     overflow: visible;
@@ -121,14 +96,44 @@ ul {
 .bayan__toggle:checked ~.bayan__trigger>.bayan__btn>img {
     transform: rotate(135deg);
 }
-.bayan__toggle:hover ~.bayan__trigger>.bayan__btn>img {
-    transform: rotate(135deg);
-}
 
-.bayan__toggle:active ~.bayan__trigger>.bayan__target {
-    opacity: 0.7;
-}
 
+@media(hover:hover){
+    .bayan__target>img:hover{
+        border: .1875rem solid #3e3e3e;
+        box-shadow: .3125rem .3125rem 0.625rem rgba(0,0,0,0.7);
+    }
+    
+    .bayan__box:hover ~.bayan__trigger>span {
+        color: #000;
+    }
+    
+    .bayan__box:hover .bayan__btn>img {
+        display: block;
+    }
+    
+    .bayan__box:hover .bayan__btn>span {
+        color: #000;
+    }
+
+
+    .bayan__toggle:hover ~.bayan__trigger>.bayan__target {
+        max-height: 100%;
+        padding-top: 1.25rem;
+        overflow: visible;
+        transform: scale(100%);
+        opacity: 1;
+    }
+
+
+    .bayan__toggle:hover ~.bayan__trigger>.bayan__btn>img {
+        transform: rotate(135deg);
+    }
+    
+    .bayan__toggle:active ~.bayan__trigger>.bayan__target {
+        opacity: 0.7;
+    }
+}
 
 @media(max-width: 51.25rem) {
     .container {
