@@ -77,6 +77,13 @@ ul {
 
 .bayan__target>img {
     max-width: 18.75rem;
+    border: .125rem solid #fff;
+    border-radius: .9375rem;
+}
+
+.bayan__target>img:hover{
+    border: .1875rem solid #3e3e3e;
+    box-shadow: .3125rem .3125rem 0.625rem rgba(0,0,0,0.7);
 }
 
 .bayan__box:hover ~.bayan__trigger>span {
