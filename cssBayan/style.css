@@ -6,8 +6,6 @@ body {
 
 
 h1 {
-    font-size: 2.375rem;
-    font-weight: 900;
     margin: 0;
     padding: 0;
 }
@@ -33,6 +31,8 @@ ul {
 }
 
 .bayan__title {
+    font-size: 2.375rem;
+    font-weight: 900;
     margin-bottom: .625rem;
 }
 
@@ -44,8 +44,7 @@ ul {
 }
 
 .bayan__btn {
-    font-size: 1.125rem;
-    color: blue;
+
     width: 100%;
     padding-top: 1.25rem;
     padding-bottom: .625rem;
@@ -53,6 +52,11 @@ ul {
     justify-content: space-between;
     align-items: center;
     border-top: .0625rem solid rgb(116, 116, 103);
+}
+
+.bayan__btn>span {
+    font-size: 1.125rem;
+    color: blue;
 }
 
 .bayan__toggle:checked ~.bayan__trigger>.bayan__btn>span {
@@ -114,6 +118,55 @@ ul {
     .bayan__toggle:hover ~.bayan__trigger >.bayan__target {
         height: 18.75rem;
         transform: scale(100%);
+    }
+}
+
+
+@media (max-width: 51.25rem) {
+    .container {
+        width: 31.25rem;
+        padding-left: 2.1875rem;
+        padding-right: 2.1875rem;
+    }
+
+    .bayan__title {
+        font-size: 2rem;
+    }
+
+    .bayan__btn>span {
+        font-size: 1rem;
+    }
+
+    .bayan__btn>img {
+        display: block;
+        height: .875rem;
+        width: .875rem;
+    }
+}
+
+@media (max-width: 20rem) {
+    .container {
+        width: 15.625rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .bayan__title {
+        font-size: 1.75rem;
+    }
+
+    .bayan__btn>span {
+        font-size: .75rem;
+    }
+
+    .bayan__btn>img {
+        display: block;
+        height: .625rem;
+        width: .625rem;
+    }
+
+    .bayan__toggle:checked ~.bayan__trigger >.bayan__target {
+        height: 12.5rem;
     }
 }
 
