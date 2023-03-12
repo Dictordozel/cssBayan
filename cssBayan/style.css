@@ -125,7 +125,6 @@ ul {
         opacity: 1;
     }
 
-
     .bayan__toggle:hover ~.bayan__trigger>.bayan__btn>img {
         transform: rotate(135deg);
     }
@@ -155,6 +154,7 @@ ul {
     }
 
     .bayan__btn>img {
+        display: block;
         width: .875rem;
         height: .875rem;
     }
@@ -184,6 +184,7 @@ ul {
     }
 
     .bayan__btn>img {
+        display: block;
         width: .75rem;
         height: .75rem;
     }
