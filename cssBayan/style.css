@@ -118,7 +118,7 @@ ul {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
     .container {
         width: 31.25rem;
         padding-left: 2.1875rem;
@@ -142,13 +142,9 @@ ul {
     .bayan__toggle:checked ~.bayan__trigger >.bayan__target {
         height: 15.625rem;
     }
-
-    .bayan__toggle:hover ~.bayan__trigger >.bayan__target {
-        height: 15.625rem;
-    }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 87.5rem) {
 
     .container {
         width: 43.75rem;
@@ -179,4 +175,3 @@ ul {
         height: 18.75rem;
     }
 }
-
