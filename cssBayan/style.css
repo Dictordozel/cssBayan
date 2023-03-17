@@ -68,7 +68,7 @@ ul {
     display: block;
     height: .625rem;
     width: .625rem;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .bayan__toggle:checked ~.bayan__trigger>.bayan__btn>img {
@@ -83,7 +83,7 @@ ul {
     border: .0625rem solid #fff;
     border-radius: .9375rem;
     transform: scale(0);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .bayan__toggle:checked ~.bayan__trigger >.bayan__target {
@@ -160,7 +160,7 @@ ul {
         display: none;
         height: 1rem;
         width: 1rem;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
     }
 
     .bayan__toggle:checked ~.bayan__trigger >.bayan__target {
